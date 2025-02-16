@@ -1,0 +1,4 @@
+app_name = "My Rust App"
+debug = true
+database_url = "sqlite://dev.db"
+api_key = "default_api_key"
