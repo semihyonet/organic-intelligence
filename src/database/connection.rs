@@ -15,5 +15,10 @@ pub async fn create_db_connection(url: String) -> Result<DatabaseConnection, DbE
 
     let connection = Database::connect(db).await?;
 
+    use migration::{Migrator, MigratorTrait};
+
+    Migrator::up(&connection, None).await?;
+
+
     Ok(connection)
 }
